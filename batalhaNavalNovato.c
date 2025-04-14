@@ -9,7 +9,7 @@ void exibirTabuleiro(int tabuleiro[10][10]) {
     printf("\n");
 
     for (int linha = 0; linha < 10; linha++) {
-        printf("%2d ", linha +1); // Números das linhas e adição da função "%2d" para garantir que o tabuleiro fique alinhado
+        printf("%2d ", linha + 1); // Números das linhas
         for (int col = 0; col < 10; col++) {
             printf("%d ", tabuleiro[linha][col]);
         }
@@ -23,7 +23,7 @@ int podePosicionarHorizontal(int tabuleiro[10][10], int linha, int coluna, int t
     for (int i = 0; i < tamanhoNavio; i++) {
         if (tabuleiro[linha][coluna + i] != 0) return 0;
     }
-    return 1; // A função return 1 nâo foi ensinada até o momento desse nível do desafio, porém adquiri seu conhecimento nos materiais disponíveis para estudo
+    return 1; 
 }
 
 // Função para verificar se é possível posicionar um navio verticalmente
@@ -42,9 +42,20 @@ int main() {
     int valorNavio = 3;
 
     // Inicializa o tabuleiro com água (valor 0)
-    int tabuleiro[10][10] = {0};
+    int tabuleiro[10][10] = {
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}   
+    };
 
-    // Coordenadas iniciais dos navios (definidas diretamente)
+    // Coordenadas iniciais dos navios 
     int linha_horizontal = 2, coluna_horizontal = 3; // Linha 2, Coluna D
     int linha_vertical = 5, coluna_vertical = 6;     // Linha 5, Coluna G
 
@@ -71,3 +82,9 @@ int main() {
 
     return 0;
 }
+
+/*
+A função return 1 não foi ensinada até o momento,
+porém adquiri seu conhecimento através do material dispónivel
+para leitura e imaginei que não tivesse problema real de usá-lo aqui
+*/
